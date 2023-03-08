@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head lang="ru">
+    <meta charset='utf-8'>
+    <title>Ваш дизайн! FEELING GOOD</title>
+    <script src="../../javascript/jquery-3.6.0.js"></script>
+    <script src="../../javascript/design.js"></script>
+    <link href='../../css/design.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant&family=Lobster&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cormorant&family=Lobster&family=Mulish:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cormorant&family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <p><a href="../../index.html">Назад</a></p>
+        <h1>Создай свой дизайн!</h1>
+    </header>
+    <div class="wrapper">
+        <div class="drawer">
+            <img src="img/tshirt-face.png" id="main-image" />
+            <canvas id='mainCanvas' width="1000" height="600"></canvas>
+            <img src="img/tshirt-face01.png" id="shape" />
+        </div>
+        <div class="tools">
+            <div class="back">Задняя сторона</div>
+            <div class="clear">Очистить</div>
+            <div class="main-colors">
+                <label for="fill-style" id="fill">Цвет заливки</label>
+                <label for="stroke-style" id="stroke">Цвет контура</label><br />
+                <input type="checkbox" id="use-fill" checked />
+                <input type="color" name="fill-color" value="#FFC173" id="fill-color" />
+                <input type="checkbox" id="use-stroke" />
+                <input type="color" name="stroke-color" value="#FFB540" id="stroke-color" /><br />
+                <label for="bg" id="choose_bg">Цвет фона</label><br />
+                <input type="color" value="#ffffff" id="bg" />
+            </div>
+            <div class="text">
+                <label for="font-size" id="text-size">Размер </label>
+                <label for="main-text" id="text_text">Текст</label><br />
+                <input type="text" id="font-size" value="10" />
+                <input type="text" id="main-text" value="Hello,world!" /><br />
+            </div>
+            <div class="figures_square">
+                <label for="side-size" id="side-size">Размер</label>
+                <label for="angle" id="rotate-angle">Угол</label><br />
+                <input type="text" id="width-size" placeholder="ширина" width="40px" value="20" />
+                <input type="text" id="height-size" placeholder="высота" width="40px" value="20" />
+                <input type="text" id="angle" value="0" />
+            </div>
+            <div class="figures_circle">
+                <label for="side-size" id="radius-size">Радиус</label>
+                <br />
+                <input type="text" id="radius" value="10" />
+
+            </div>
+            <div class="figures_triangle">
+                <label for="side-size" id="side-size-tri">Размер</label>
+                <label for="angle" id="rotate-angle-tri">Угол</label><br />
+                <input type="text" id="size-tri" value="20" />
+                <input type="text" id="angle-tri" value="0" />
+            </div>
+            <div class="eraser">
+                <label for="erase-size">Размер</label><br />
+                <input type="text" id="erase-size" value="10" />
+            </div>
+            <div class="possible-tools">
+                <button id="text" class="active"><img src="img/text.png" height="30px" /></button>
+                <button id="square"><img src="img/square.png" height="30px" /></button>
+                <button id="circle"><img src="img/circle.png" height="30px" /></button>
+                <button id="triangle"><img src="img/triangle.png" height="30px" /></button>
+                <button id="line"><img src="img/line.png" height="30px" /></button>
+                <button id="erase"><img src="img/eraser.png" height="30px" /></button><br />
+
+            </div>
+            <div class="gradient">
+                <label for="gradient">Цвета градиента</label><br />
+                <input type="color" id="gr_color_1" value="#62B1D0" id="gradient-color-1" />
+                <input type="color" id="gr_color_2" value="#FF8B73" id="gradient-color-2" />
+            </div>
+            <div class="picture">
+                <label for="your-picture">Выбери картинку!</label><br />
+                <input type="text" name="your-picture" id="pict" placeholder="ссылка" value="data:image/jpeg;base64,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" /><br />
+                <input type="text" id="pict-width" placeholder="ширина" size="7" value="250" />
+                <input type="text" id="pict-height" placeholder="высота" size="7" value="250" />
+
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <div class='footer-content'>
+            <div class='foot'>
+                <p>Соцсети</p>
+                <ul>
+                    <li><a href='#'><img src="../../img/telegram.png" width=" 20px" class="icon" />t.me/username</a></li>
+                    <li><a href='#'><img src="../../img/inst.png" width=" 20px" class="icon" />instagram.com/heydj</a></li>
+                    <li><a href='#'><img src="../../img/youtube.png" width=" 20px" class="icon" />youtube.com/heydj</a></li>
+                </ul>
+            </div>
+            <div class='foot'>
+                <p>Контакты</p>
+                <ul class="contacts">
+                    <li><a href=#>Тел:+6867835</a></li>
+                    <li><a href=#>Тел:+3992924</a></li>
+                    <li><a href=#>Почта:heydj@gagjhg.jhy</a></li>
+                </ul>
+            </div>
+            <div class='foot'>
+                <p>Помощь</p>
+                <ul>
+                    <li><a href=#>Служба поддержки</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

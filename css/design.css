@@ -1,0 +1,263 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    font-size: 20px;
+    font-family: 'Mulish',sans-serif;
+    color: #343131;
+    font-weight: normal;
+    background-color: white;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display:none;
+
+}
+
+header {
+    display:flex;
+    justify-content:space-between;
+    padding-left: 50px;
+    padding-right: 150px;
+    background: #EDD2CA;
+    padding-bottom:20px;
+}
+header p {
+    margin: 0;
+    padding-top: 30px;
+
+}
+a {
+    text-decoration: none;
+    color: #343131;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #595959;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0%;
+    font-family: 'Cormorant', serif;
+}
+header h1 {
+    margin:0;
+    padding-top:20px;
+}
+.wrapper{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    min-width:1400px;
+}
+.drawer {
+    width: 60%;
+    position: relative;
+    border-right: 5px solid #BFA39A;
+    height:580px;
+
+}
+.drawer img{
+    width:684px;
+    margin-left:40px;
+    position:absolute;
+}
+#shape{
+    position:absolute;
+    top:0px;
+    display:none;
+}
+.back, .clear{
+    margin-left:15px;
+    padding:2px;
+    margin-right:15px;
+    border:1px solid #BBABA8;
+    border-radius:10%;
+    box-sizing:content-box;
+    position:absolute;
+    width:78px;
+}
+.clear{
+    top:210px;
+    width:89px;
+}
+.clear:hover {
+    background: #ffeaf5;
+    cursor:pointer;
+}
+.back:hover {
+    background: #ffeaf5;
+    cursor: pointer;
+}
+canvas {
+    position:relative;
+}
+.tools {
+    width: 40%;
+    padding-top: 30px;
+}
+.main-colors{
+    padding-left:150px;
+}
+#choose_bg{
+    padding-left:90px
+}
+#bg{
+    margin-left:100px; 
+}
+.text,  .figures_triangle {
+    padding-left: 135px;
+    display: none;
+}
+.text{
+    display:block;
+}
+.figures_square {
+    padding-left: 95px;
+    display: none;
+}
+.figures_circle{
+    padding-left:210px;
+    display:none;
+}
+#side-size-tri{
+    padding-left:35px;
+}
+#rotate-angle-tri{
+    padding-left:90px;
+}
+#radius-size{
+    padding-left:35px;
+}
+.eraser {
+    padding-left: 210px;
+    display: none;
+}
+.possible-tools{
+    padding-left:140px;
+}
+.gradient,.picture{
+    padding-left:190px;
+}
+.gradient label{
+    padding-left:13px;
+}
+#pict{
+    margin-left:20px;
+    margin-bottom:10px;
+}
+#pict-height{
+    margin-left:50px;
+}
+.picture label{
+    padding-left:13px;
+}
+.gradient input{
+    margin-left:7px;
+}
+input[type='color'] {
+    margin-top: 15px;
+    width: 80px;
+    height: 30px;
+    border: none;
+    padding: 2px;
+    margin-bottom:20px;
+    cursor:pointer;
+}
+input[type='text'] {
+    margin-top: 10px;
+    margin-bottom: 30px
+}
+input[type='text']:focus{
+    outline:none;
+    background:#FCEDE9;
+    border:2px solid 	#BBABA8;
+}
+input[type='file']{
+    margin-top:20px;
+}
+#stroke{
+    padding-left:40px
+}
+#use-stroke{
+    margin-left:60px;
+}
+#text-size{
+    padding-left:45px;
+}
+#text_text{
+    padding-left:85px;
+}
+#side-size{
+    padding-left:110px;
+}
+#rotate-angle{
+    padding-left:120px;
+}
+.eraser label{
+    padding-left:35px;
+}
+.possible-tools{
+    margin-bottom:20px;
+}
+.possible-tools button{
+    margin-right:5px;
+    background:#FFEEE4;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+button.active{
+    background:#e9c0b4;
+}
+.push{
+    background:#f1e6e3;
+}
+footer{
+	background-color:#BD7777;
+	position:fixed;
+	top:100%;
+	left:0;
+	width:100%;
+	transition:transform 0.8s ease-in-out;
+}
+footer.active{
+	transform:translateY(-100%);
+}
+.footer-content{
+	display: flex;
+    justify-content: space-around;
+    max-width:1000px;
+	margin:auto;
+}
+footer ul{
+	margin:0;
+	padding:0;
+}
+footer li{
+	list-style-type:none;
+	padding-left:1px;
+	font-size:12px;
+}
+footer p{
+	font-style:normal;
+	font-size:14px;
+	color:#D0D0D0;
+	margin-top:15px;
+	margin-bottom:10px;
+}
+.foot{
+	padding-top:7px;
+	padding-bottom:20px;
+}
+.foot a{
+	color:#D0D0D0;
+}
+.foot a:hover{
+	color:white;
+} 
+.icon{
+	margin-right:10px;
+}
+.contacts li{
+	margin-bottom:12px;
+}
+
